@@ -57,7 +57,9 @@ ul {
 This will generate the layout with all the defaults, provided by the sass
 variables.
 Like so:
-[example-1]:(https://www.dropbox.com/s/sj52l3szihm734n/example1.png?dl=0)
+
+![example-1](https://www.dropbox.com/s/sj52l3szihm734n/example1.png)
+
 *The size of the blocks and background-color are not added by the mixin*
 
 #### Example 2
@@ -68,6 +70,8 @@ ul {
 }
 ```
 
-[example-2](https://www.dropbox.com/s/uumhebm35jx52fd/example2.png?dl=0)
+![example-2](https://www.dropbox.com/s/uumhebm35jx52fd/example2.png)
 
 *A grid with two columns and 5px of margin between blocks*
+
+*More examples will be added soon*
