@@ -58,7 +58,7 @@ This will generate the layout with all the defaults, provided by the sass
 variables.
 Like so:
 
-![example-1](https://www.dropbox.com/s/sj52l3szihm734n/example1.png)
+![example-1](https://raw.githubusercontent.com/vascocsilva/flexbox-grid-helper/master/images/example1.png)
 
 *The size of the blocks and background-color are not added by the mixin*
 
@@ -70,7 +70,7 @@ ul {
 }
 ```
 
-![example-2](https://www.dropbox.com/s/uumhebm35jx52fd/example2.png)
+![example-2](https://raw.githubusercontent.com/vascocsilva/flexbox-grid-helper/master/images/example2.png)
 
 *A grid with two columns and 5px of margin between blocks*
 
