@@ -1,0 +1,32 @@
+@import 'flexbox-grid-helper';
+
+$blue: #09d;
+
+.grid li .inner,
+.grid article .inside {
+  height: 50px;
+}
+
+.grid-1 {
+  @include flex-grid(2, 5px);
+
+  li .inner { background-color: $blue; }
+}
+
+.grid-2 {
+  @include flex-grid(2);
+
+  li .inner { background-color: darken($blue, 10); }
+}
+
+.grid-3 {
+  @include flex-grid-base($cols: 10, $margin: 5px, $tag: 'article', $inner-class: '.inside');
+
+  article .inside { background-color: lighten($blue, 10); }
+}
+
+.grid-4 {
+  @include flex-grid-base($cols: 2, $direction: column, $wrap: nowrap);
+
+  li .inner { background-color: lighten($blue, 40); }
+}

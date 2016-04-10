@@ -1,0 +1,59 @@
+.grid li .inner,
+.grid article .inside {
+  height: 50px; }
+
+.grid-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  list-style-type: none;
+  padding: 0; }
+  .grid-1 > li {
+    flex-basis: calc(100% / 2); }
+    .grid-1 > li .inner {
+      margin: 5px; }
+  .grid-1 li .inner {
+    background-color: #09d; }
+
+.grid-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  list-style-type: none;
+  padding: 0; }
+  .grid-2 > li {
+    flex-basis: calc(100% / 2); }
+    .grid-2 > li .inner {
+      margin: 10px; }
+  .grid-2 li .inner {
+    background-color: #0076aa; }
+
+.grid-3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -5px; }
+  .grid-3 > article {
+    flex-basis: calc(100% / 10); }
+    .grid-3 > article .inside {
+      margin: 5px; }
+  .grid-3 article .inside {
+    background-color: #11b6ff; }
+
+.grid-4 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 -10px;
+  list-style-type: none;
+  padding: 0; }
+  .grid-4 > li {
+    flex-basis: calc(100% / 2); }
+    .grid-4 > li .inner {
+      margin: 10px; }
+  .grid-4 li .inner {
+    background-color: #aae5ff; }
+
+/*# sourceMappingURL=main.css.map */
