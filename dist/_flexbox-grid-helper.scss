@@ -11,7 +11,7 @@
 //     A DRY way to achieve a basic layout I usually need in many projects.
 //
 //     Author: Vasco Silva (https://github.com/vascocsilva)
-//     Version: 1.0
+//     Version: 1.0.0
 //
 
 // Variables
@@ -30,13 +30,6 @@ $fgh-wrap: 'wrap';
 @function flex-calc-size($cols) {
   @return calc(100% / #{$cols});
 }
-
-// Function to use in a future version
-// where the inner element is optional,
-// and flex element children make-up the grid with margins
-// @function flex-calc-size-tag($cols, $margin) {
-//   @return calc(100% / #{$cols} - #{$margin} * 2);
-// }
 
 // Base mixin that provides the core functionality to generate the grid styles
 // Accepts several arguments, all of them have default values
@@ -59,10 +52,12 @@ $fgh-wrap: 'wrap';
   }
 
   > #{$tag} {
+    display: flex;
     flex-basis: flex-calc-size($cols);
 
     #{$inner-class} {
       margin: #{$margin};
+      width: 100%;
     }
   }
 }
