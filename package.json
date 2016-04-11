@@ -1,0 +1,24 @@
+{
+  "name": "flexbox-grid-helper",
+  "version": "1.0.0",
+  "description": "Simple and useful mixins to make flex grids in Sass.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vascocsilva/flexbox-grid-helper.git"
+  },
+  "keywords": [
+    "flexbox",
+    "grid",
+    "blocks",
+    "flexbox-grid",
+    "helper",
+    "mixins"
+  ],
+  "author": "Vasco Silva <https://github.com/vascocsilva>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vascocsilva/flexbox-grid-helper/issues"
+  },
+  "homepage": "https://github.com/vascocsilva/flexbox-grid-helper#readme"
+}
