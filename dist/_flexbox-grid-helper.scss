@@ -1,0 +1,78 @@
+//   __ _                            _     _        _          _
+//  / _| |                          (_)   | |      | |        | |
+// | |_| | _____  ________ __ _ _ __ _  __| |______| |__   ___| |_ __   ___ _ __
+// |  _| |/ _ \ \/ /______/ _` | '__| |/ _` |______| '_ \ / _ \ | '_ \ / _ \ '__|
+// | | | |  __/>  <      | (_| | |  | | (_| |      | | | |  __/ | |_) |  __/ |
+// |_| |_|\___/_/\_\      \__, |_|  |_|\__,_|      |_| |_|\___|_| .__/ \___|_|
+//                         __/ |                              | |
+//                        |___/                               |_|
+//
+//     Simple and useful mixins to make flex grids in Sass
+//     A DRY way to achieve a basic layout I usually need in many projects.
+//
+//     Author: Vasco Silva (https://github.com/vascocsilva)
+//     Version: 1.0.0
+//
+
+// Variables
+// Default values for the mixins
+// Can be changed or overwritten
+$fgh-cols: 4;
+$fgh-margin: '10px';
+$fgh-tag: 'li';
+$fgh-class: '.inner';
+$fgh-direction: 'row';
+$fgh-wrap: 'wrap';
+
+// Auxiliary function to get the size in % for a given number of columns
+// @param $cols (nr of columns)
+// @return size in %
+@function flex-calc-size($cols) {
+  @return calc(100% / #{$cols});
+}
+
+// Base mixin that provides the core functionality to generate the grid styles
+// Accepts several arguments, all of them have default values
+// Arguments:
+// $cols - nr of columns for the grid, has a default provided by the variable// $margin - size of margins between grid blocks in px, has a default provided by the variable
+// $tag - html tag for the flex items inside flex container, has a default provided by the variable
+// $inner-class - class of the element inside the grid blocks,
+//                that make up the margins, has a default provided by the variable
+// $direction - direction of the flex items, has a default provided by the variable
+// $wrap - flex wrap value, has a default provided by the variable
+@mixin flex-grid-base($cols: $fgh-cols, $margin: $fgh-margin, $tag: $fgh-tag, $inner-class: $fgh-class, $direction: $fgh-direction, $wrap: $fgh-wrap) {
+  display: flex;
+  flex-direction: #{$direction};
+  flex-wrap: #{$wrap};
+  margin: 0 unquote("-#{$margin}");
+
+  @if $tag == 'li' {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  > #{$tag} {
+    display: flex;
+    flex-basis: flex-calc-size($cols);
+
+    #{$inner-class} {
+      margin: #{$margin};
+      width: 100%;
+    }
+  }
+}
+
+// Generate styles for the grid row layout
+// Arguments:
+// $cols (nr of columns, has a default)
+// $margin (margin between flex items, has a default)
+@mixin flex-grid($cols: $fgh-cols, $margin: $fgh-margin) {
+  @include flex-grid-base($cols, $margin);
+}
+
+// Generate styles for the grid column layout
+// Arguments:
+// $margin (margin between flex items, has a default)
+@mixin flex-grid-cols($margin: $fgh-margin) {
+  @include flex-grid-base($cols: '1', $margin: $margin, $direction: 'column');
+}
