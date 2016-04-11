@@ -109,6 +109,6 @@ Given the html above, you can put this code inside the flex container:
 
 ![example-4](https://raw.githubusercontent.com/vascocsilva/flexbox-grid-helper/master/images/example-4.gif)
 
-*A grid with 6 columns and 2px margin, that become 2 columns in <= 600px screen size.*
+*A grid with 6 columns and 2px margin, that becomes 2 columns in <= 600px screen size.*
 
 *More examples will be added soon*

@@ -1,6 +1,6 @@
 {
   "name": "flexbox-grid-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple and useful mixins to make flex grids in Sass.",
   "main": "index.js",
   "repository": {
