@@ -11,14 +11,11 @@
   padding: 0; }
   .grid-1 > li {
     display: flex;
-    flex-basis: calc(100% / 6); }
+    flex-basis: calc(100% / 2); }
     .grid-1 > li .inner {
-      margin: 2px;
+      margin: 5px;
       width: 100%; }
   .grid-1 li .inner {
     background-color: #09d; }
-  @media (max-width: 600px) {
-    .grid-1 li {
-      flex-basis: calc(100% / 2); } }
 
 /*# sourceMappingURL=main.css.map */
